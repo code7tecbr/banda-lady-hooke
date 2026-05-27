@@ -1,0 +1,124 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "my",
+  "fqn": "code7sites/sites/my",
+  "seq": 1,
+  "data": {},
+  "status": "updated",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "my",
+    "Symbol(alchemy::ResourceFQN)": "code7sites/sites/my",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 1,
+    "apiToken": {
+      "@secret": {
+        "version": "v1",
+        "ciphertext": "oGp6u2emSPe3asmqLWS0MYrEBcf4yW7WCHJZvoOz6dQxMPl+xlkQK7VEhRp8nXBuMaElAe0=",
+        "iv": "XTj9nYKKm3lc3TxN",
+        "salt": "AmvFqxNhUhzh3+C47piwOg==",
+        "tag": "OqFCqUEfX80XigH37kZGRg=="
+      }
+    },
+    "domains": [
+      {
+        "Symbol(alchemy::ResourceKind)": "cloudflare::CustomDomain",
+        "Symbol(alchemy::ResourceID)": "dev.code7.tec.br",
+        "Symbol(alchemy::ResourceFQN)": "code7sites/sites/my/dev.code7.tec.br",
+        "Symbol(alchemy::ResourceScope)": {
+          "@scope": null
+        },
+        "Symbol(alchemy::ResourceSeq)": 0,
+        "name": "dev.code7.tec.br",
+        "zoneId": "21ddb20066e336cd8508777a0c9e8fd1",
+        "adopt": true,
+        "workerName": "code7sites-my-sites",
+        "dev": false,
+        "apiToken": {
+          "@secret": {
+            "version": "v1",
+            "ciphertext": "5PIIIkfOizs1xFBc9wUJgtZsIWjf/YRf7aSVE0UdX0UR64eHU/3XDozRfRzEzfHoQmS+g9A=",
+            "iv": "K94guf+GwrFRvT5n",
+            "salt": "1B6LEhtKiDlVHJMDQs98zQ==",
+            "tag": "ot0KXcwbpNItatMI4eZBzQ=="
+          }
+        },
+        "id": "7f173a163cfadebab17366e27090bb0778131204",
+        "environment": "production",
+        "createdAt": 1776260984837,
+        "updatedAt": 1776260984837
+      }
+    ],
+    "noBundle": true,
+    "compatibility": "node",
+    "entrypoint": ".output/server/index.mjs",
+    "name": "code7sites-my-sites",
+    "cwd": "",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "compatibilityDate": "2026-03-10",
+    "assets": {
+      "html_handling": "auto-trailing-slash",
+      "not_found_handling": "single-page-application",
+      "run_worker_first": false
+    },
+    "bindings": {
+      "ASSETS": {
+        "type": "assets",
+        "path": ".output/public"
+      }
+    },
+    "dev": {
+      "hasRemote": true
+    },
+    "type": "service",
+    "id": "my",
+    "format": "esm",
+    "createdAt": {
+      "@date": "2026-04-15T13:49:44.932Z"
+    },
+    "updatedAt": {
+      "@date": "2026-04-20T22:18:51.462Z"
+    },
+    "url": "https://code7sites-my-sites.code7tec.workers.dev"
+  },
+  "props": {
+    "apiToken": {
+      "@secret": {
+        "version": "v1",
+        "ciphertext": "iw7iePwBtp8ZBeAitXj7iXD2NbQMDAVJEXGKKrklZFkOuBrTUQqrmpz2t/T/4jXmEXQ+1kk=",
+        "iv": "J6oOgRatfOXI6eDa",
+        "salt": "vUwe4eujTFn+GArrSSiwLA==",
+        "tag": "rBIJf+Ap9xtPDY7zUdWQ6A=="
+      }
+    },
+    "domains": [
+      "dev.code7.tec.br"
+    ],
+    "noBundle": true,
+    "compatibility": "node",
+    "entrypoint": ".output/server/index.mjs",
+    "name": "code7sites-my-sites",
+    "cwd": "",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "compatibilityDate": "2026-03-10",
+    "assets": {
+      "html_handling": "auto-trailing-slash",
+      "not_found_handling": "single-page-application",
+      "run_worker_first": false
+    },
+    "bindings": {
+      "ASSETS": {
+        "type": "assets",
+        "path": ".output/public"
+      }
+    }
+  }
+}
