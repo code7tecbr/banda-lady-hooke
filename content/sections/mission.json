@@ -5,10 +5,23 @@
   "layout": "default",
   "iconLayout": "stacked",
   "align": "center",
-  "title": "Por que escolher a Lady Hooke?",
+  "title": "Diferenciais do Repertório",
+  "subtitle": "Do Grunge de Seattle ao Rock Nacional — um setlist desenhado para não deixar ninguém parado",
   "items": [
-    { "icon": "🎵", "title": "Repertório variado",   "description": "Decades de Rock e Pop Rock: dos clássicos aos hits atuais, sempre com fidelidade ao original." },
-    { "icon": "🔥", "title": "Energia no palco",      "description": "Cada show é uma experiência única — presença de palco, interação com o público e muita adrenalina." },
-    { "icon": "🤝", "title": "Profissionalismo",      "description": "Pontualidade, equipamento próprio e rider técnico completo para garantir o sucesso do seu evento." }
+    {
+      "icon": "fas fa-guitar",
+      "title": "Versatilidade de Épocas",
+      "description": "Das guitarras clássicas dos anos 70 aos hinos dos anos 2000 — Pearl Jam, Alice in Chains, Black Sabbath, Deep Purple, O Rappa, Titãs e muito mais."
+    },
+    {
+      "icon": "fas fa-compact-disc",
+      "title": "Versões Exclusivas",
+      "description": "Releituras marcantes que surpreendem: Enjoy the Silence no peso do HIM, Carta aos Missionários e outras versões que o público não esperava."
+    },
+    {
+      "icon": "fas fa-fire",
+      "title": "Engajamento Total",
+      "description": "Músicas que todo fã de rock sabe cantar do início ao fim. Hinos do Rock Nacional com O Rappa, Plebe Rude, Raimundos, Frejat e Biquini Cavadão."
+    }
   ]
 }
