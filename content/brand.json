@@ -10,5 +10,6 @@
   "foregroundColor": "#FFFFFF",
   "backgroundColor": "#0F0F0F",
   "secondaryBackground": "#1A1A1A",
-  "mutedColor": "#9CA3AF"
+  "mutedColor": "#9CA3AF",
+  "backgroundMusic": "/music/lady-hooke-tedio-cover.mp3"
 }
