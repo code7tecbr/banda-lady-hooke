@@ -4,7 +4,6 @@
     { "label": "Início",       "href": "#hero" },
     { "label": "Shows",        "href": "#services" },
     { "label": "Sobre",        "href": "#about" },
-    { "label": "Instagram",    "href": "#instagram" },
-    { "label": "Contato",      "href": "#contact" }
+    { "label": "Instagram",    "href": "#instagram" }
   ]
 }

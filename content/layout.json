@@ -3,10 +3,10 @@
     { "id": "hero",      "component": "HeroSection",      "enabled": true  },
     { "id": "services",  "component": "ServicesSection",   "enabled": true  },
     { "id": "about",     "component": "AboutSection",      "enabled": true  },
-    { "id": "mission",   "component": "MissionSection",    "enabled": true  },
+    { "id": "mission",   "component": "MissionSection",    "enabled": false },
     { "id": "gallery",   "component": "GallerySection",    "enabled": false },
     { "id": "instagram", "component": "InstagramSection",  "enabled": true  },
-    { "id": "contact",   "component": "ContactSection",    "enabled": true  },
+    { "id": "contact",   "component": "ContactSection",    "enabled": false },
     { "id": "reviews",   "component": "ReviewsSection",    "enabled": false }
   ]
 }
