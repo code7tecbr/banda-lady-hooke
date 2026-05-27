@@ -6,5 +6,10 @@
     "label": "Contratar agora",
     "href": "https://wa.me/5531990635155"
   },
-  "backgroundImages": ["/hero-bg.jpg"]
+  "backgroundImages": [
+    "/images/hero/hero-bg.jpg",
+    "/images/hero/slide1.jpg",
+    "/images/hero/slide2.jpg",
+    "/images/hero/slide3.jpg"
+  ]
 }
