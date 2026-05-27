@@ -1,0 +1,25 @@
+{
+  "colors": {},
+  "layout": "default",
+  "iconLayout": "stacked",
+  "align": "center",
+  "title": "Nossos Shows",
+  "subtitle": "Para cada ocasião, um show à altura",
+  "items": [
+    {
+      "icon": "🎸",
+      "title": "Festas e Baladas",
+      "description": "Shows de covers de Rock e Pop Rock para animar festas privadas e baladas com muito estilo e energia."
+    },
+    {
+      "icon": "💍",
+      "title": "Casamentos",
+      "description": "Repertório especial para a noite mais importante da sua vida — clássicos inesquecíveis ao vivo."
+    },
+    {
+      "icon": "🏢",
+      "title": "Eventos Corporativos",
+      "description": "Shows profissionais para confraternizações, lançamentos e eventos empresariais."
+    }
+  ]
+}

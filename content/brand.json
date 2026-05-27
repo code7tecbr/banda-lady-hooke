@@ -1,0 +1,14 @@
+{
+  "name": "Banda Lady Hooke",
+  "tagline": "Rock e Pop Rock que fazem a festa acontecer",
+  "logo": "/logo.svg",
+  "logoHeight": 40,
+  "favicon": "/favicon.ico",
+  "fontFamily": "",
+  "primaryColor": "#E53E3E",
+  "accentColor": "#F6AD55",
+  "foregroundColor": "#FFFFFF",
+  "backgroundColor": "#0F0F0F",
+  "secondaryBackground": "#1A1A1A",
+  "mutedColor": "#9CA3AF"
+}

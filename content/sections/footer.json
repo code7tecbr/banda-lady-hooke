@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "colors": {
+    "background": "#0A0A0A",
+    "foreground": "#FFFFFF",
+    "muted": "#9CA3AF"
+  },
+  "slogan": "Rock e Pop Rock que fazem a festa acontecer.",
+  "address": "",
+  "phones": [],
+  "email": "",
+  "social": {
+    "instagram": "bandaladyhooke",
+    "facebook": "",
+    "whatsapp": "5531990635155"
+  },
+  "quickLinks": [
+    { "label": "Início",    "href": "#hero" },
+    { "label": "Shows",     "href": "#services" },
+    { "label": "Sobre",     "href": "#about" },
+    { "label": "Contato",   "href": "#contact" }
+  ],
+  "copyright": "© 2026 Banda Lady Hooke. Todos os direitos reservados."
+}
