@@ -1,0 +1,92 @@
+{
+  "kind": "cloudflare::Worker",
+  "id": "banda-lady-hooke",
+  "fqn": "code7sites/prod/banda-lady-hooke",
+  "seq": 1,
+  "data": {},
+  "status": "created",
+  "output": {
+    "Symbol(alchemy::ResourceKind)": "cloudflare::Worker",
+    "Symbol(alchemy::ResourceID)": "banda-lady-hooke",
+    "Symbol(alchemy::ResourceFQN)": "code7sites/prod/banda-lady-hooke",
+    "Symbol(alchemy::ResourceScope)": {
+      "@scope": null
+    },
+    "Symbol(alchemy::ResourceSeq)": 1,
+    "apiToken": {
+      "@secret": {
+        "version": "v1",
+        "ciphertext": "uXBoJqbcqo5e8uC2zXOGegmZuuiwcKCE9iz7sj+gwLn7xUCMYLaKoRuRjDRZGCJ4m5sbX8k=",
+        "iv": "XiNkwmjJc+s46V8F",
+        "salt": "AKtsNYepWvLOCldLw22AYw==",
+        "tag": "FSYJzBqqcB+gqb5JriMe5w=="
+      }
+    },
+    "noBundle": true,
+    "compatibility": "node",
+    "entrypoint": ".output/server/index.mjs",
+    "name": "code7sites-banda-lady-hooke-prod",
+    "cwd": "",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "compatibilityDate": "2026-03-10",
+    "assets": {
+      "html_handling": "auto-trailing-slash",
+      "not_found_handling": "single-page-application",
+      "run_worker_first": false
+    },
+    "bindings": {
+      "ASSETS": {
+        "type": "assets",
+        "path": ".output/public"
+      }
+    },
+    "dev": {
+      "hasRemote": true
+    },
+    "type": "service",
+    "id": "banda-lady-hooke",
+    "format": "esm",
+    "createdAt": {
+      "@date": "2026-05-27T13:26:36.177Z"
+    },
+    "updatedAt": {
+      "@date": "2026-05-27T13:26:36.177Z"
+    },
+    "url": "https://code7sites-banda-lady-hooke-prod.code7tec.workers.dev"
+  },
+  "props": {
+    "apiToken": {
+      "@secret": {
+        "version": "v1",
+        "ciphertext": "+WHj8Zr3vF7qCkpEt1rQlUQAiCIpadmfZQ2Anbs5gLsXd24OYzp7GRxAwagq2fHbVjmL69A=",
+        "iv": "897kDvfc2ipoKzJq",
+        "salt": "YQGgQz24st/Gbh4ko9KJDw==",
+        "tag": "DmBpOhuqo79naxg35W0HMQ=="
+      }
+    },
+    "noBundle": true,
+    "compatibility": "node",
+    "entrypoint": ".output/server/index.mjs",
+    "name": "code7sites-banda-lady-hooke-prod",
+    "cwd": "",
+    "compatibilityFlags": [
+      "nodejs_compat",
+      "nodejs_compat_populate_process_env"
+    ],
+    "compatibilityDate": "2026-03-10",
+    "assets": {
+      "html_handling": "auto-trailing-slash",
+      "not_found_handling": "single-page-application",
+      "run_worker_first": false
+    },
+    "bindings": {
+      "ASSETS": {
+        "type": "assets",
+        "path": ".output/public"
+      }
+    }
+  }
+}
