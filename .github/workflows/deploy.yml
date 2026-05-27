@@ -3,6 +3,9 @@ name: Deploy
 on:
   push:
     branches: [main]
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -12,9 +15,9 @@ jobs:
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: code7tecbr/my-sites-action@v1
+      - uses: code7tecbr/my-sites-action@v1.1
         with:
           app_name: ${{ secrets.APP_NAME }}
           cf_api_token: ${{ secrets.CF_API_TOKEN }}
