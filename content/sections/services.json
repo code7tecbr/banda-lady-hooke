@@ -7,17 +7,17 @@
   "subtitle": "Para cada ocasião, um show à altura",
   "items": [
     {
-      "icon": "🎸",
+      "icon": "fas fa-guitar",
       "title": "Festas e Baladas",
       "description": "Shows de covers de Rock e Pop Rock para animar festas privadas e baladas com muito estilo e energia."
     },
     {
-      "icon": "💍",
+      "icon": "fas fa-ring",
       "title": "Casamentos",
       "description": "Repertório especial para a noite mais importante da sua vida — clássicos inesquecíveis ao vivo."
     },
     {
-      "icon": "🏢",
+      "icon": "fas fa-briefcase",
       "title": "Eventos Corporativos",
       "description": "Shows profissionais para confraternizações, lançamentos e eventos empresariais."
     }

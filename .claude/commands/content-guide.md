@@ -1,6 +1,6 @@
 ---
 name: content-guide
-version: 1.13.0
+version: 1.14.0
 description: >
   Guia completo de edição de conteúdo do projeto my-sites. Use este skill sempre que o
   usuário quiser editar textos, imagens, cores, seções ou qualquer configuração do site —
@@ -11,7 +11,7 @@ description: >
 
 # Guia de Conteúdo — my-sites
 
-> **Versão deste guia:** `1.12.0`
+> **Versão deste guia:** `1.14.0`
 > Verifique se há uma versão mais recente no repositório oficial:
 > https://github.com/code7tecbr/my-sites-action/blob/main/.claude/commands/content-guide.md
 
@@ -102,6 +102,30 @@ Disponíveis em `services.json` e `mission.json`:
 | `align` | `"left"` / `"center"` / `"right"` | Alinhamento horizontal dos itens dentro do card |
 
 > Novos layouts são adicionados por seção conforme a necessidade. O campo `layout` já existe em todos os JSONs como reserva para variantes futuras.
+
+### Ícones com Font Awesome
+
+Além de emojis, o campo `icon` aceita classes do **Font Awesome 6 Free** em qualquer seção que suporte ícones (`services.json`, `mission.json`, `about.json` com layout `pillars`):
+
+```json
+{ "icon": "fas fa-bolt",     "title": "Energia" }
+{ "icon": "fab fa-whatsapp", "title": "WhatsApp" }
+{ "icon": "far fa-envelope", "title": "E-mail" }
+```
+
+**Prefixos disponíveis:**
+
+| Prefixo | Estilo | Quando usar |
+|---|---|---|
+| `fas` | Solid (preenchido) | Ícones gerais — maior variedade |
+| `far` | Regular (contorno) | Visual mais leve/clean |
+| `fab` | Brands (marcas) | Logos de redes sociais e serviços (`fa-whatsapp`, `fa-instagram`, `fa-spotify`) |
+
+Consulte o catálogo completo em [fontawesome.com/icons](https://fontawesome.com/icons?o=r&m=free) — filtre por **Free** para ver apenas os disponíveis.
+
+**Prioridade de renderização:** `iconSvg` → Font Awesome class → emoji/texto
+
+> `iconSize` **não se aplica** a ícones Font Awesome — o tamanho é controlado pela classe CSS do componente.
 
 ---
 
@@ -397,7 +421,7 @@ Suporta dois layouts selecionáveis via campo `layout`.
 | `image` | default | Foto ilustrativa ao lado do texto |
 | `imageAlt` | default | Texto alternativo da imagem (acessibilidade e SEO) |
 | `pillars` | pillars | Array de objetos com os valores da empresa |
-| `pillars[].icon` | pillars | Emoji exibido acima do título (opcional; fallback quando não há `iconSvg`) |
+| `pillars[].icon` | pillars | Emoji (`💡`) ou classe Font Awesome (`"fas fa-lightbulb"`). Opcional; fallback quando não há `iconSvg` |
 | `pillars[].iconSvg` | pillars | Caminho para SVG em `public/` (opcional; tem prioridade sobre `icon`) |
 | `pillars[].iconSize` | pillars | `"sm"`, `"md"`, `"lg"` ou `"xl"`. Padrão: `"md"` |
 | `pillars[].bg` | pillars | Cor de fundo do card (qualquer valor CSS: `"#1a1a2e"`, `"rgba(0,0,0,0.3)"`). Quando presente, a borda do card é removida automaticamente |
@@ -439,9 +463,9 @@ Suporta dois layouts selecionáveis via campo `layout`.
 | `iconLayout` | não | `"inline"` (ícone e título na mesma linha) ou `"stacked"` (ícone acima do título). Padrão: `"inline"` |
 | `align` | não | Alinhamento dos itens: `"left"`, `"center"` ou `"right"`. Padrão: `"left"` |
 | `titleColor` | não | Cor exclusiva do título da seção (H2). Não afeta outros textos |
-| `icon` | sim | Emoji ou texto curto exibido no card (fallback quando não há `iconSvg`) |
+| `icon` | sim | Emoji (`🎸`) ou classe Font Awesome (`"fas fa-bolt"`, `"fab fa-whatsapp"`). Fallback quando não há `iconSvg` |
 | `iconSvg` | não | Caminho para arquivo SVG em `public/` (ex: `"/icons/servico1.svg"`). Se presente, tem prioridade sobre `icon` |
-| `iconSize` | não | Tamanho do SVG: `"sm"`, `"md"`, `"lg"` ou `"xl"`. Padrão: `"md"` |
+| `iconSize` | não | Tamanho do SVG: `"sm"`, `"md"`, `"lg"` ou `"xl"`. Padrão: `"md"`. Não se aplica a Font Awesome |
 | `title` | sim | Nome do serviço |
 | `items[].titleColor` | não | Cor exclusiva do título do item (H3). Não afeta outros textos |
 | `description` | sim | Texto curto do card |
@@ -476,9 +500,9 @@ Mesma estrutura de serviços, mas sem `detailPage` ou `cta`. Ideal para valores,
 | `iconLayout` | `"inline"` (ícone e título na mesma linha) ou `"stacked"` (ícone acima do título). Padrão: `"inline"` |
 | `align` | Alinhamento dos itens: `"left"`, `"center"` ou `"right"`. Padrão: `"center"` |
 | `titleColor` | Cor exclusiva do título da seção (H2). Não afeta outros textos |
-| `icon` | Emoji ou texto curto (fallback quando não há `iconSvg`) |
+| `icon` | Emoji (`⭐`) ou classe Font Awesome (`"fas fa-star"`, `"fab fa-spotify"`). Fallback quando não há `iconSvg` |
 | `iconSvg` | Caminho para arquivo SVG em `public/` (ex: `"/icons/missao1.svg"`). Se presente, tem prioridade sobre `icon` |
-| `iconSize` | Tamanho do SVG: `"sm"`, `"md"`, `"lg"` ou `"xl"`. Padrão: `"md"` |
+| `iconSize` | Tamanho do SVG: `"sm"`, `"md"`, `"lg"` ou `"xl"`. Padrão: `"md"`. Não se aplica a Font Awesome |
 | `bg` | Cor de fundo do item (qualquer valor CSS: `"#1a1a2e"`, `"rgba(0,0,0,0.3)"`). Quando presente, adiciona `rounded-2xl p-6` ao card automaticamente |
 | `items[].titleColor` | Cor exclusiva do título do item (H3). Não afeta outros textos |
 
@@ -798,5 +822,6 @@ Posicione o objeto na posição desejada dentro do array.
 | 2026-04 | Fix `bg` no AboutSection | Borda do card removida automaticamente quando `pillars[].bg` está presente (consistente com MissionSection) |
 | 2026-04 | Fix ícone centralizado (stacked) | Ícones SVG agora centralizam corretamente com `mx-auto` em MissionSection e ServicesSection |
 | 2026-04 | Analytics GA4 com funil de serviços | `useTracking` composable com `select_item`, `view_item` e `generate_lead`; documentação de UTM para rastreamento de origem |
+| 2026-05 | Suporte a Font Awesome no campo `icon` | Campo `icon` aceita classes FA6 Free (`fas`, `far`, `fab`) em ServicesSection, MissionSection e AboutSection (pillars). Prioridade: `iconSvg` → FA class → emoji |
 
 > Ao implementar uma nova feature, adicione uma linha nesta tabela com a data e descrição resumida.
