@@ -1,6 +1,6 @@
 ---
 name: content-guide
-version: 1.13.0
+version: 1.14.0
 description: >
   Guia completo de edição de conteúdo do projeto my-sites. Use este skill sempre que o
   usuário quiser editar textos, imagens, cores, seções ou qualquer configuração do site —
@@ -11,7 +11,7 @@ description: >
 
 # Guia de Conteúdo — my-sites
 
-> **Versão deste guia:** `1.13.0`
+> **Versão deste guia:** `1.14.0`
 > Verifique se há uma versão mais recente no repositório oficial:
 > https://github.com/code7tecbr/my-sites-action/blob/main/.claude/commands/content-guide.md
 
@@ -697,6 +697,61 @@ Feed curado do Instagram com grid de fotos e link para o perfil.
 
 ---
 
+### Vídeos — `content/sections/video.json`
+
+Grid de thumbnails do YouTube com expand/collapse e lightbox com player embutido.
+
+> **Seção opcional** — sites que não tiverem `content/sections/video.json` continuam funcionando normalmente. A seção simplesmente não é renderizada.
+
+```json
+{
+  "colors": {},
+  "title": "Nossos Vídeos",
+  "titleColor": "",
+  "subtitle": "",
+  "channelUrl": "https://youtube.com/@seucanal",
+  "channelLabel": "Ver canal no YouTube",
+  "initialLimit": 6,
+  "items": [
+    {
+      "videoId": "dQw4w9WgXcQ",
+      "title": "Nome do vídeo",
+      "description": "Descrição opcional exibida no lightbox"
+    }
+  ]
+}
+```
+
+| Campo | Obrigatório | Descrição |
+|---|---|---|
+| `title` | sim | Título da seção |
+| `titleColor` | não | Cor exclusiva do título (H2) |
+| `subtitle` | não | Texto pequeno acima do título |
+| `channelUrl` | não | URL do canal no YouTube — ativa botão "Ver canal" |
+| `channelLabel` | não | Texto do botão do canal. Padrão: `"Ver canal no YouTube"` |
+| `initialLimit` | não | Quantos vídeos mostrar antes do botão "ver mais". Padrão: `6` |
+| `items[].videoId` | sim | ID do vídeo — os 11 caracteres após `?v=` na URL |
+| `items[].title` | sim | Título exibido abaixo do thumbnail e no lightbox |
+| `items[].description` | não | Texto adicional exibido no lightbox |
+
+**Como obter o `videoId`:**
+Abra o vídeo no YouTube. A URL terá o formato `https://youtube.com/watch?v=XXXXXXXXXXX` — copie apenas os 11 caracteres após `?v=`.
+
+**Comportamento:**
+- Exibe `initialLimit` thumbnails (imagens automáticas do YouTube, sem custo)
+- Se houver mais vídeos, aparece botão com seta animada para expandir
+- Clique no thumbnail → abre lightbox com player YouTube (`youtube-nocookie.com` para privacidade)
+- Dentro do lightbox: setas para navegar entre vídeos, tecla `Esc` para fechar
+
+**Para ativar:**
+1. Crie `content/sections/video.json` com seus vídeos
+2. Em `content/layout.json`, adicione ou mude para `"enabled": true`:
+```json
+{ "id": "video", "component": "VideoSection", "enabled": true }
+```
+
+---
+
 ## Páginas de Detalhe — `content/details/items/`
 
 Cada arquivo JSON cria uma página em `/item/[slug]`, onde o slug é o **nome do arquivo sem `.json`**.
@@ -859,5 +914,6 @@ Posicione o objeto na posição desejada dentro do array.
 | 2026-04 | Fix ícone centralizado (stacked) | Ícones SVG agora centralizam corretamente com `mx-auto` em MissionSection e ServicesSection |
 | 2026-04 | Analytics GA4 com funil de serviços | `useTracking` composable com `select_item`, `view_item` e `generate_lead`; documentação de UTM para rastreamento de origem |
 | 2026-05 | Música de fundo | `brand.backgroundMusic` ativa áudio em loop; botão mute/unmute no navbar via `useBackgroundMusic` composable; preferência salva no `localStorage` |
+| 2026-05 | VideoSection | Grid de thumbnails YouTube com expand/collapse e lightbox; seção opcional — sites sem `video.json` não quebram |
 
 > Ao implementar uma nova feature, adicione uma linha nesta tabela com a data e descrição resumida.

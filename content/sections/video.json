@@ -1,0 +1,15 @@
+{
+  "colors": {},
+  "title": "Nossos Vídeos",
+  "titleColor": "",
+  "subtitle": "Veja a Lady Hooke ao vivo",
+  "channelUrl": "",
+  "channelLabel": "Ver canal no YouTube",
+  "initialLimit": 6,
+  "items": [
+    { "videoId": "nZAoqOXFrs4", "title": "", "description": "" },
+    { "videoId": "VLIvYmA8sdY", "title": "", "description": "" },
+    { "videoId": "eagITvojXkk", "title": "", "description": "" },
+    { "videoId": "_2gEs7qcQp4", "title": "", "description": "" }
+  ]
+}

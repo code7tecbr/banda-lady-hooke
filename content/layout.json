@@ -5,6 +5,7 @@
     { "id": "about",     "component": "AboutSection",      "enabled": true  },
     { "id": "mission",   "component": "MissionSection",    "enabled": true  },
     { "id": "gallery",   "component": "GallerySection",    "enabled": false },
+    { "id": "video",     "component": "VideoSection",      "enabled": true  },
     { "id": "instagram", "component": "InstagramSection",  "enabled": true  },
     { "id": "contact",   "component": "ContactSection",    "enabled": false },
     { "id": "reviews",   "component": "ReviewsSection",    "enabled": false }
