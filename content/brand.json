@@ -4,7 +4,7 @@
   "logo": "/logo.png",
   "logoHeight": 40,
   "favicon": "/favicon.ico",
-  "fontFamily": "",
+  "fontFamily": "'Pacifico', cursive",
   "primaryColor": "#E53E3E",
   "accentColor": "#E53E3E",
   "foregroundColor": "#FFFFFF",
